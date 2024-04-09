@@ -29,7 +29,6 @@ export default function Contact() {
         <Typography variant="h4" color="primary" sx={{ fontWeight: 'bold' }}>
           **Company phone number**
         </Typography>
-        {/* Other content (hours, response time) */}
 
         <Box my={2}>
           <Typography variant="h6" gutterBottom>

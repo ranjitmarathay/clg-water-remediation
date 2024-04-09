@@ -12,7 +12,8 @@ import mopup from '../images/mopup.jpeg';
 function ServicesItem(props) {
   return (
     <Grid container spacing={2} sx={{ alignItems: "center", marginBottom: 2, marginTop: 2 }} direction={{ xs: "column", lg: "row" }}>
-      <Grid item xs={12} lg={6}>
+      {/* <Grid item xs={6} md={6} lg={6} sx={{ order: { xs: 2, lg: 1 } }}> */}
+      <Grid item xs={6} lg={6}>
         <Box sx={{ display: "flex", flexDirection: "column", justifyContent: "space-between", height: "100%" }}>
           <Typography variant="h5" sx={{ fontSize: { xs: "1.2rem", sm: "1.5rem", md: "2rem", lg: "2.5rem" } }}>
             {props.title}
@@ -22,19 +23,20 @@ function ServicesItem(props) {
           </Typography>
         </Box>
       </Grid>
-      <Grid item xs={12} lg={6} sx={{ alignContent: "center" }}>
-      <Box
-        component="img"
-        src={props.image}
-        sx={{
-          width: { xs: "100%", lg: "612px" },
-          height: { lg: "auto" },
-          maxHeight: { xs: "500px", lg: "500px" }, 
-          objectFit: "cover",
-          objectPosition: "center",
-          marginLeft: { lg: "auto" },
-          marginRight: { lg: "auto" }
-        }}
+      {/* <Grid item xs={6} md={6} lg={6} sx={{ order: { xs: 1, lg: 2 }, alignContent: "center" }}> */}
+      <Grid item xs={6} lg={6}>
+        <Box
+          component="img"
+          src={props.image}
+          sx={{
+            width: { xs: "100%", lg: "100%" },
+            height: { lg: "auto" },
+            maxHeight: { xs: "500px", lg: "500px" }, 
+            objectFit: "cover",
+            objectPosition: "center",
+            marginLeft: { lg: "auto" },
+            marginRight: { lg: "auto" }
+          }}
       />
       </Grid>
     </Grid>
