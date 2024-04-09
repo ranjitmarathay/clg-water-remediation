@@ -2,6 +2,11 @@ import React from "react";
 import { Grid, Box, Typography, Container } from "@mui/material";
 
 import defaultImage from '../images/defaultImage.jpeg';
+// import buildback from '../images/buildback2.jpeg';
+import buildback2 from '../images/buildback2.jpeg';
+import fans from '../images/fans.jpeg';
+import generalplumbing from '../images/generalplumbing.jpeg';
+import mopup from '../images/mopup.jpeg';
 
 
 function ServicesItem(props) {
@@ -22,7 +27,7 @@ function ServicesItem(props) {
         component="img"
         src={props.image}
         sx={{
-          width: { xs: "100%", lg: "100%" },
+          width: { xs: "100%", lg: "612px" },
           height: { lg: "auto" },
           maxHeight: { xs: "500px", lg: "500px" }, 
           objectFit: "cover",
@@ -47,29 +52,24 @@ export default function Services(props) {
           Services
         </Typography>
         <ServicesItem
-          title="Service 1"
-          text="Include information about how this service operates and how it is transformative for the customer."
-          image={defaultImage}
+          title="Water Mitigation"
+          text="Water mitigation is the process of reducing or preventing the amount of water damage that occurs after a flood or a permeating leak. This service is transformative for the customer as it helps to prevent further damage, mold growth, and structural issues by quickly addressing the source of water and drying out the affected areas."
+          image={mopup}
         />
         <ServicesItem
-          title="Service 2"
-          text="Include information about how this service operates and how it is transformative for the customer."
-          image={defaultImage}
+          title="Water Extraction"
+          text="Water extraction involves the removal of excess water from your property using specialized equipment. This service is crucial for customers experiencing flooding or water accumulation, as it helps to minimize water damage, prevent mold growth, and prepare the area for drying and restoration."
+          image={fans}
         />
         <ServicesItem
-          title="Service 3"
-          text="Include information about how this service operates and how it is transformative for the customer."
-          image={defaultImage}
+          title="General Plumbing"
+          text="General plumbing services cover a wide range of plumbing needs, from fixing leaks and clogs to installing new fixtures. For customers, this service is transformative as it ensures the smooth functioning of their plumbing system, prevents potential water damage, and maintains the overall health of their property."
+          image={generalplumbing}
         />
         <ServicesItem
-          title="Service 4"
-          text="Include information about how this service operates and how it is transformative for the customer."
-          image={defaultImage}
-        />
-        <ServicesItem
-          title="Service 5"
-          text="Include information about how this service operates and how it is transformative for the customer."
-          image={defaultImage}
+          title="Water Damage Build Back"
+          text="Water damage build back is the process of reconstructing and restoring areas of your property that have been damaged by water. This service is transformative for customers as it not only repairs the damage but also often includes improvements and upgrades to prevent future issues and enhance the value of their property."
+          image={buildback2}
         />
       </Container>
     );

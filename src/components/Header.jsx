@@ -28,7 +28,7 @@ export default function Header() {
   <Toolbar disableGutters sx={{ padding: '0px' }}>
     <Link href="" onClick={() => navigate('/')} color="#000" underline="none">
       <Typography fontSize={{ xs: 22, sm: 28, md: 32, lg: 42 }}>
-        **Company Name**
+        Austin Water Mitigation
       </Typography>
     </Link>
     <Box sx={{ flexGrow: 1 }} /> {/* Add this line to push the menu icon to the right */}

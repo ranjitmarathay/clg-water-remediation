@@ -6,6 +6,7 @@ import SelectServices from "./SelectServices";
 import ContactInfo from "./ContactInfo";
 import PickDayOfWeek from "./PickDayOfWeek";
 import useMediaQuery from '@mui/material/useMediaQuery';
+import EnterSquareFootage from "./EnterSquareFootage";
 import { useTheme } from '@mui/material/styles';
 /* global google */
 
@@ -18,11 +19,11 @@ export default function Quote() {
   const [timeSaved, setTimeSaved] = useState(0);
   
   const [selectedServices, setSelectedServices] = useState([
-    {service: 'Service 1', selected: false},
-    {service: 'Service 2', selected: false},
-    {service: 'Service 3', selected: false},
-    {service: 'Service 4', selected: false},
-    {service: 'Service 5', selected: false}
+    {service: 'Water Mitigation', selected: false},
+    {service: 'Water Extraction', selected: false},
+    {service: 'General Plumbing', selected: false},
+    {service: 'Water Damage Build Back', selected: false},
+    // {service: 'Service 5', selected: false}
   ]);
 
   const [selectedDays, setSelectedDays] = useState({
@@ -46,6 +47,8 @@ export default function Quote() {
   const [message, setMessage] = useState("");
 
   const [address, setAddress] = useState("");
+  
+  const [squareFootage, setSquareFootage] = useState(0);
 
   const handleServicesChange = (event) => {
     const selectedValues = event.target.value;
@@ -142,19 +145,21 @@ export default function Quote() {
           timeSaved += 2;
         }
   
-        if (services.includes("Service 1")) {
-          quoteValue += 300;
-          timeSaved += 4;
-        } else if (services.includes("Service 2")) {
-          quoteValue += 125;
-          timeSaved += 2.5;
-        } else if (services.includes("Service 3")) {
-          quoteValue += 150;
-          timeSaved += 1.5;
-        } else if (services.includes("Service 4")) {
-          quoteValue += 175;
-          timeSaved += 2;
+        if (services.includes("Water Mitigation")) {
+          quoteValue += 3100;
+          timeSaved += 12;
+        } else if (services.includes("Water Extraction")) {
+          quoteValue += 1125;
+          timeSaved += 22.5;
+        } else if (services.includes("General Plumbing")) {
+          quoteValue += 1150;
+          timeSaved += 11.5;
+        } else if (services.includes("Water Damage Build Back")) {
+          quoteValue += 1175;
+          timeSaved += 12;
         }
+
+        quoteValue += 11 * squareFootage; 
   
         // alert(`Your quote is $${quoteValue} for ${days} and ${services}`);
         setQuoteValue(quoteValue)
@@ -194,6 +199,7 @@ export default function Quote() {
         2. Enter Address
       </Typography>
         <EnterAddress address={address} setAddress={setAddress}/>
+        <EnterSquareFootage squareFootage={squareFootage} setSquareFootage={setSquareFootage}/>
      </Box>
      <Box>
       <Typography

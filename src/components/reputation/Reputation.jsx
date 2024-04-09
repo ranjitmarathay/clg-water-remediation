@@ -30,7 +30,7 @@ export default function Reputation() {
         <Grid item xs={12} sm={6}>
           <ReputationItem 
             title="Why Us?" 
-            text="In Austin's competitive landscape we set ourselves apart with excellent customer service, dependability and superior workmanship." 
+            text="In Austin's competitive water mitigation and restoration market we set ourselves apart with excellent customer service, dependability and superior workmanship." 
             image="https://i.imgur.com/0jJx8s6.png"
           />
         </Grid>
